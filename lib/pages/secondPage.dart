@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_front_end_exam/pages/secondPage.dart';
 import 'package:flutter_front_end_exam/pages/thirdPage.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class SecondPage extends StatelessWidget {
+  const SecondPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // backgroundColor:
         title: const Text(
-          'Home Page',
+          'Second Page',
         ),
       ),
       body: Center(
@@ -29,21 +27,20 @@ class HomePage extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Text(
-                'aplikasi ini berfungsi untuk menambahkan dat user yang akan diisi lalu dimauskkan sebagai user', 
+                'aplikasi ini berfungsi untuk menambahkan dat user yang akan diisi lalu dimauskkan sebagai user',
                 textAlign: TextAlign.center,
               ),
             ),
             Padding(
               padding: EdgeInsets.symmetric(vertical: 20),
-              child: ElevatedButton(onPressed: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) {
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return ThirdPage();
-                  }
-                  ));
-              }, 
+                  }));
+                },
                 child: Text('View more'),
-              ), 
+              ),
             ),
           ],
         ),
